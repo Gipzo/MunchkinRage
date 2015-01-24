@@ -23,7 +23,7 @@ public class CharcterBattle : MonoBehaviour {
 
     void CalculateDamage() {
 
-        damage = state.GetComponent<CharcterState>().defaultDamage + inventory.damage;
+      // damage = state.GetComponent<CharcterState>().defaultDamage + inventory.damage;///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     
     }
 

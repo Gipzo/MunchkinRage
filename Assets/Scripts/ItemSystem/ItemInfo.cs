@@ -13,14 +13,32 @@ public class ItemInfo : MonoBehaviour
 
     public enum enType { Arms, Potions, Helmet, Body, Pants, Shoes, Shield}
 
+	public enTypeSubstance substn;
+
+	public enum enTypeSubstance {Rusty, Steel, Charmed6, Epic};
+
     public int pBlock;
 
-    public int Damage;
+    public float mindamage;
 
-    public int Armors;
+	public float maxdamage;
 
-    public int Rarity;
+	private float damage;
 
+    public int armors; //щит и вид брони
 
+    public int rarity;
+
+	public int power, agility;
+	
+	public float chanceblock;
+
+	public float block; //блокируем урон
+
+	public int percentCrit;
+
+	public int addHelthFromArmor;
+
+	public int chanceDrop;
 
 }
