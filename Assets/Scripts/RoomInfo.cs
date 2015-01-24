@@ -19,6 +19,16 @@ public class RoomInfo : MonoBehaviour {
     public int curLvl; //текущй уровень
 
 
+    void Start()
+    {
+        SelectLvl();
+
+        ChoceEnemy();
+
+        SpawEnemy();
+
+    }
+
     void SelectLvl() {
 
         switch (curLvl) { 
@@ -79,13 +89,6 @@ public class RoomInfo : MonoBehaviour {
 
     }
 
-    void Start() {
-        SelectLvl();
-
-        ChoceEnemy();
-
-        SpawEnemy();
-    
-    }
+   
 
 }

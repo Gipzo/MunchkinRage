@@ -13,12 +13,29 @@ public class EnemyState : MonoBehaviour
 
     public enum enTypeClass { Archer, Swordsman, Tank, Magician }
 
+    public int power;
+    public int agility;
+
+
     public float curHealth;
     private float maxHealth;
 
     public int armor;
 
+    public float damage;
+
+    public float crit;
+    public float critChance;
+    public int pCrit;
+    public int missP;
+
+    public float destroyBlockChance;
+
     public string nameEnemy;
+
+    public enTypePerk perck;
+
+    public enum enTypePerk { Krit, Block, DestroyBlock }
 
 
     void Start()
@@ -33,6 +50,24 @@ public class EnemyState : MonoBehaviour
         SelectHealthGoblin();
 
         curHealth = maxHealth;
+
+
+        Stats();
+
+    }
+
+
+    void Stats()
+    {
+
+        destroyBlockChance = power; //шанс пробить блок
+        damage = power; //урон от силы
+        armor = power / 5;//броня от силы
+        missP = agility;//шанс мисса от ловкости
+        missP -= 2 * armor;//тоже шанс мисса
+        crit = 1 + 0.1f * agility; //множетель крит
+        critChance = agility; //шанс крита
+
 
     }
 
