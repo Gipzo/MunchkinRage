@@ -1,55 +1,127 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< Updated upstream:Assets/Prefabs/Rooms/Wall.prefab
 --- !u!1 &149558
+=======
+--- !u!1 &120616
+>>>>>>> Stashed changes:Assets/Prefabs/Rooms/TestWall.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
+<<<<<<< Updated upstream:Assets/Prefabs/Rooms/Wall.prefab
   - 4: {fileID: 449558}
   - 61: {fileID: 6185390}
   m_Layer: 8
   m_Name: Wall
+=======
+  - 4: {fileID: 420616}
+  - 65: {fileID: 6523916}
+  m_Layer: 8
+  m_Name: TestWall
+>>>>>>> Stashed changes:Assets/Prefabs/Rooms/TestWall.prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream:Assets/Prefabs/Rooms/Wall.prefab
 --- !u!1 &177594
+=======
+--- !u!1 &141636
+>>>>>>> Stashed changes:Assets/Prefabs/Rooms/TestWall.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
+<<<<<<< Updated upstream:Assets/Prefabs/Rooms/Wall.prefab
   - 4: {fileID: 477594}
   - 212: {fileID: 21277594}
   m_Layer: 8
   m_Name: wall
+=======
+  - 4: {fileID: 441636}
+  - 95: {fileID: 9541640}
+  m_Layer: 0
+  m_Name: TestWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &141638
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 441638}
+  - 33: {fileID: 3341638}
+  - 23: {fileID: 2341638}
+  m_Layer: 0
+  m_Name: Cube
+>>>>>>> Stashed changes:Assets/Prefabs/Rooms/TestWall.prefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+<<<<<<< Updated upstream:Assets/Prefabs/Rooms/Wall.prefab
 --- !u!4 &449558
+=======
+--- !u!1 &141640
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 441640}
+  - 33: {fileID: 3341640}
+  - 23: {fileID: 2341640}
+  m_Layer: 0
+  m_Name: Cube.001
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &420616
+>>>>>>> Stashed changes:Assets/Prefabs/Rooms/TestWall.prefab
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< Updated upstream:Assets/Prefabs/Rooms/Wall.prefab
   m_GameObject: {fileID: 149558}
+=======
+  m_GameObject: {fileID: 120616}
+>>>>>>> Stashed changes:Assets/Prefabs/Rooms/TestWall.prefab
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+<<<<<<< Updated upstream:Assets/Prefabs/Rooms/Wall.prefab
   - {fileID: 477594}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &477594
+=======
+  - {fileID: 441636}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!4 &441636
+>>>>>>> Stashed changes:Assets/Prefabs/Rooms/TestWall.prefab
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
+<<<<<<< Updated upstream:Assets/Prefabs/Rooms/Wall.prefab
   m_GameObject: {fileID: 177594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -63,6 +135,67 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149558}
+=======
+  m_GameObject: {fileID: 141636}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -.939999998}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 441638}
+  - {fileID: 441640}
+  m_Father: {fileID: 420616}
+  m_RootOrder: 0
+--- !u!4 &441638
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141638}
+  m_LocalRotation: {x: -4.32977997e-17, y: .707106709, z: .707106829, w: -4.32978063e-17}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 100, y: 100.000008, z: 100.000008}
+  m_Children: []
+  m_Father: {fileID: 441636}
+  m_RootOrder: 0
+--- !u!4 &441640
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141640}
+  m_LocalRotation: {x: -4.32977997e-17, y: .707106709, z: .707106829, w: -4.32978063e-17}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 100, y: 100.000008, z: 100.000008}
+  m_Children: []
+  m_Father: {fileID: 441636}
+  m_RootOrder: 1
+--- !u!23 &2341638
+Renderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141638}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 9d4c1ace89a064412b9d0a6eec9c23f0, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!23 &2341640
+Renderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141640}
+>>>>>>> Stashed changes:Assets/Prefabs/Rooms/TestWall.prefab
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -80,7 +213,11 @@ SpriteRenderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
+<<<<<<< Updated upstream:Assets/Prefabs/Rooms/Wall.prefab
   - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+=======
+  - {fileID: 2100000, guid: a94277a82799a4af0b6644973fec41ba, type: 2}
+>>>>>>> Stashed changes:Assets/Prefabs/Rooms/TestWall.prefab
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -88,8 +225,52 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
+<<<<<<< Updated upstream:Assets/Prefabs/Rooms/Wall.prefab
   m_Sprite: {fileID: 21300000, guid: f5c56ae277e9446a9abfd18455a421d2, type: 3}
   m_Color: {r: .522058845, g: .345374227, b: .249513403, a: 1}
+=======
+--- !u!33 &3341638
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141638}
+  m_Mesh: {fileID: 4300000, guid: 47f78b81dd1a3431fbb957489f7b38df, type: 3}
+--- !u!33 &3341640
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141640}
+  m_Mesh: {fileID: 4300002, guid: 47f78b81dd1a3431fbb957489f7b38df, type: 3}
+--- !u!65 &6523916
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120616}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 6, z: 10}
+  m_Center: {x: .550000012, y: 3, z: 0}
+--- !u!95 &9541640
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141636}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 47f78b81dd1a3431fbb957489f7b38df, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+>>>>>>> Stashed changes:Assets/Prefabs/Rooms/TestWall.prefab
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -99,6 +280,10 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
+<<<<<<< Updated upstream:Assets/Prefabs/Rooms/Wall.prefab
   m_RootGameObject: {fileID: 149558}
+=======
+  m_RootGameObject: {fileID: 120616}
+>>>>>>> Stashed changes:Assets/Prefabs/Rooms/TestWall.prefab
   m_IsPrefabParent: 1
   m_IsExploded: 1

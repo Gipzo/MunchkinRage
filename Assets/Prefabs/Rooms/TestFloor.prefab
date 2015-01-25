@@ -7,9 +7,15 @@ GameObject:
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
+<<<<<<< Updated upstream:Assets/Prefabs/Rooms/TestFloor.prefab
   - 4: {fileID: 425380}
   m_Layer: 0
   m_Name: TestFloor
+=======
+  - 4: {fileID: 498296}
+  m_Layer: 8
+  m_Name: Intersection
+>>>>>>> Stashed changes:Assets/Prefabs/Rooms/Intersection.prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22,12 +28,21 @@ GameObject:
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
+<<<<<<< Updated upstream:Assets/Prefabs/Rooms/TestFloor.prefab
   - 4: {fileID: 474676}
   - 33: {fileID: 3374676}
   - 64: {fileID: 6474676}
   - 23: {fileID: 2374676}
   m_Layer: 0
   m_Name: Quad
+=======
+  - 4: {fileID: 498298}
+  - 33: {fileID: 3398298}
+  - 65: {fileID: 6598298}
+  - 23: {fileID: 2398298}
+  m_Layer: 8
+  m_Name: Cube
+>>>>>>> Stashed changes:Assets/Prefabs/Rooms/Intersection.prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

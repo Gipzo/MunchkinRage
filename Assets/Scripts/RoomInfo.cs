@@ -13,12 +13,32 @@ public class RoomInfo : MonoBehaviour {
 
 	public Transform[] Doors = null;
 
+<<<<<<< Updated upstream
     public int EnemyLevel;
 	public string ChoosenEnemyType;
 	public bool HasEnemy;
 	public bool HasChest;
 	public Vector2 Size;
 	public Vector2 Position;
+=======
+	public Transform[] nearRooms; // соседние комнаты
+
+	public Transform Level;
+
+	public Transform[] Doors;
+
+    public int maxEnemyLvl; //максимальное кол-во enemy на всём уровне
+    
+    public int maxEnemyinRoom; //максимальное кол-во enemy в комноте
+
+    public int curLvl; //текущй уровень
+
+	public Vector2 Size;
+	public Vector2 Position;
+
+
+    void SelectLvl() {
+>>>>>>> Stashed changes
 
 	public bool Open =false;
 
@@ -133,6 +153,13 @@ public class RoomInfo : MonoBehaviour {
 		}
 
 
+
+	void OnMouseDown(){
+		LevelPathSelector lps = Level.gameObject.GetComponent ("LevelPathSelector") as LevelPathSelector;
+		if (lps.SelectTime) {
+			lps.ToggleRoom(this.transform);
+		}
+		}
 
     void Start() {
 
