@@ -24,7 +24,7 @@ public class CharcterBattle : MonoBehaviour {
     void CalculateDamage() {
 
 		damage = state.GetComponent<CharcterState> ().defaultDamage;// + inventory.damage;
-    
+
     }
 
 
@@ -55,8 +55,6 @@ public class CharcterBattle : MonoBehaviour {
 
     void IHit() {
 
-        //string CurrentWeapon = inventory.GetCurrentWeapon();
-        //systemB.GetComponent<EnemyState>().curHealth -= inventory.damage ;
 
 
         if (state.GetComponent<CharcterState>().critChance > state.GetComponent<CharcterState>().pCrit)
