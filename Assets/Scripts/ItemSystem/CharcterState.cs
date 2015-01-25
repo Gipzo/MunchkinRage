@@ -47,7 +47,7 @@ public class CharcterState : MonoBehaviour {
         missP -= 2 * defaultArmor;//тоже шанс мисса
         crit = 1 + 0.1f * agility; //множетель крит
         critChance = agility; //шанс крита
-        blockChance = inventory.GetPBlock();
+        //blockChance = inventory.GetPBlock();
 
     }
 
@@ -70,29 +70,6 @@ public class CharcterState : MonoBehaviour {
     }
 
 
-    void SetPerk() { 
     
-    if(inventory.GetWeaponType()=="Mace"){
-
-        perck = enTypePerk.DestroyBlock;
-    
-    }
-
-    if (inventory.GetWeaponType() == "Sworld")
-    {
-
-        perck = enTypePerk.Block;
-
-    }
-
-
-    if (inventory.GetWeaponType() == "Dogger")
-    {
-
-        perck = enTypePerk.Krit;
-
-    }
-    
-    }
 
 }

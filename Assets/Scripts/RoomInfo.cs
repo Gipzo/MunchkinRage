@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 
 public class RoomInfo : MonoBehaviour {
@@ -6,89 +7,135 @@ public class RoomInfo : MonoBehaviour {
 
     public Transform[] transformEnemy; //готовые enemy
 
-    public Transform[] spawnPosition; //spawn позиция
+	public Transform[] nearRooms; // соседние комнаты
 
-    public Transform[] enemySet; //enemy в уровне
+	public Transform Level;
 
-    public Transform[] prefabsEnemy; //enemy все виды
+	public Transform[] Doors = null;
 
-    public int maxEnemyLvl; //максимальное кол-во enemy на всём уровне
+    public int EnemyLevel;
+	public string ChoosenEnemyType;
+	public bool HasEnemy;
+	public bool HasChest;
+	public Vector2 Size;
+	public Vector2 Position;
+
+	public bool Open =false;
+
+	public int numberCount = 0; 
+
+
+
+
+
+	public GameObject GetEnemyPrefab() {
+		GameObject prefab = null;
+		if (ChoosenEnemyType == "Goblin") {
+			prefab = (Level.GetComponent("LevelGenerator") as LevelGenerator).orcs[EnemyLevel];
+		}
+		if (ChoosenEnemyType == "Skeleton") {
+			prefab = (Level.GetComponent("LevelGenerator") as LevelGenerator).skeletons[EnemyLevel];
+		}
+		if (ChoosenEnemyType == "Orc") {
+			prefab = (Level.GetComponent("LevelGenerator") as LevelGenerator).goblins[EnemyLevel];
+    }
     
-    public int maxEnemyinRoom; //максимальное кол-во enemy в комноте
+			return Instantiate (prefab) as GameObject;
+	}
 
-    public int curLvl; //текущй уровень
+	public Vector3 GetRandomPosition() {
+		float padding = 3.0f;
+		return new Vector3 (
+			transform.position.x+Size.x/2.0f-UnityEngine.Random.Range(padding, Size.x-padding),
+
+			transform.position.y-Size.y/2.0f+UnityEngine.Random.Range(padding, Size.y-padding),
+			0
+			);
+	}
+
+	public void SpawnEnemy() {
+		if (HasEnemy) {
+			GameObject enemy =GetEnemyPrefab();
+			enemy.transform.parent = transform;
+			enemy.transform.position = GetRandomPosition();
+			enemy.AddComponent("EnemyBattle");
+			transformEnemy = new Transform[1] {enemy.transform};
+		}
+	}
+
+	public void SpawnChest() {
+		GameObject prefab = (Level.GetComponent ("LevelGenerator") as LevelGenerator).chest;
+		GameObject chest = Instantiate (prefab) as GameObject;
+		chest.transform.parent = transform;
+		chest.name = "Chest";
+		chest.transform.position = GetRandomPosition ();
+	}
+
+	public void TurnLightOn() {
+		foreach (Transform tr in transform) {
+			if (tr.gameObject.name == "RoomLight") {
+				tr.light.enabled=true;
+			}
+		}
+	}
+
+	public void OpenRoom(GameObject player) {
+		if (!Open) {
+			SpawnEnemy();
+			if (HasChest) {
+				SpawnChest();
+			}
+			Open=true;
+		}
+		TurnLightOn ();
+	}
+
+	public void AddDoor(Transform Door) {
+		if (Doors == null) {
+			Doors = new Transform[0];
+		}
+
+		
+		foreach (Transform existingDoor in Doors) {
+			if (existingDoor == Door) {
+				return;
+			}
+		}
+
+		Array.Resize (ref Doors, Doors.Length + 1);
+		Doors [Doors.Length - 1] = Door;
+
+	}
+
+	public void AddRoom(Transform Room) {
+		
+		if (nearRooms == null) {
+			nearRooms = new Transform[0];
+		}
+
+		foreach (Transform existingRoom in nearRooms) {
+			if (existingRoom == Room) {
+				return;
+			}
+		}
+
+		Array.Resize (ref nearRooms, nearRooms.Length + 1);
+		nearRooms [nearRooms.Length - 1] = Room;
+	}
+
+	void OnMouseDown(){
+		//OpenRoom(this.gameObject);
+		//Debug.Log ("Mouse down");
+		LevelPathSelector lps = Level.gameObject.GetComponent ("LevelPathSelector") as LevelPathSelector;
+		if (lps.SelectTime) {
+			lps.ToggleRoom(this.transform);
+		}
+		}
 
 
-    void Start()
-    {
-        SelectLvl();
 
-        ChoceEnemy();
-
-        SpawEnemy();
+    void Start() {
 
     }
-
-    void SelectLvl() {
-
-        switch (curLvl) { 
-        
-            case 1:
-
-                maxEnemyinRoom = 1;
-                break;
-
-            case 2:
-
-                maxEnemyinRoom = 2;
-                break;
-
-            case 3:
-
-                maxEnemyinRoom = 3;
-                break;
-
-        
-        }
-
-    }
-
-    void ChoceEnemy (){
-
-        transformEnemy = new Transform[maxEnemyinRoom];
-        enemySet = new Transform[maxEnemyLvl];
-
-        for (int i = 0; i < enemySet.Length; i++ ) {
-
-            if (enemySet[i] == null)
-            {
-
-                enemySet[i] = prefabsEnemy[Random.Range(0, prefabsEnemy.Length)];
-
-            }
-
-        }
-
-    }
-
-
-    void SpawEnemy() {
-
-        for (int i = 0; i < transformEnemy.Length; i++ ) {
-
-            if (transformEnemy[i] == null)
-            {
-
-                transformEnemy[i] = (Transform)Instantiate(enemySet[i], spawnPosition[i].transform.position, spawnPosition[i].transform.rotation);
-
-                enemySet[i] = null;
-
-            }
-
-        }
-
-    }
-
-   
 
 }

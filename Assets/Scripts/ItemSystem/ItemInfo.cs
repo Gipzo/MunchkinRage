@@ -5,19 +5,26 @@ public class ItemInfo : MonoBehaviour
 {
 
     public string nameItem;
-   
+
+    public Sprite icon;
 
 
     public enType Type = enType.Arms;
 
 
-    public enum enType { Arms, Potions, Helmet, Body, Pants, Shoes, Shield}
+    public enum enType { Arms,  Helmet, Body, Shoes, Shield}
 
     public int pBlock;
+    public int block;
 
-    public int Damage;
+    public float minDamage;
+    public float maxDamage;
 
     public int Armors;
+
+    public int power;
+
+    public int agility;
 
     public int Rarity;
 

@@ -23,7 +23,7 @@ public class CharcterBattle : MonoBehaviour {
 
     void CalculateDamage() {
 
-        damage = state.GetComponent<CharcterState>().defaultDamage + inventory.damage;
+		damage = state.GetComponent<CharcterState> ().defaultDamage;// + inventory.damage;
     
     }
 
@@ -55,8 +55,8 @@ public class CharcterBattle : MonoBehaviour {
 
     void IHit() {
 
-        string CurrentWeapon = inventory.GetCurrentWeapon();
-        systemB.GetComponent<EnemyState>().curHealth -= inventory.damage ;
+        //string CurrentWeapon = inventory.GetCurrentWeapon();
+        //systemB.GetComponent<EnemyState>().curHealth -= inventory.damage ;
 
 
         if (state.GetComponent<CharcterState>().critChance > state.GetComponent<CharcterState>().pCrit)
@@ -75,5 +75,24 @@ public class CharcterBattle : MonoBehaviour {
         }
 
     }
+
+	public int AttackDMG() {
+		return UnityEngine.Random.Range(10, 50);
+	}
+
+
+	public bool AttackBD() {
+		if (UnityEngine.Random.Range (0f, 1.0f) <= 0.5f) {
+			return true;
+		}
+		return false;
+	}
+
+	public bool AttackCrit() {
+		if (UnityEngine.Random.Range (0f, 1.0f) <= 0.5f) {
+			return true;
+		}
+		return false;
+	}
 
 }

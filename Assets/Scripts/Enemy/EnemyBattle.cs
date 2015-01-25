@@ -63,4 +63,23 @@ public class EnemyBattle : MonoBehaviour {
     
     }
 
+	public int AttackDMG() {
+		return UnityEngine.Random.Range(10, 50);
+	}
+	
+	
+	public bool AttackBD() {
+		if (UnityEngine.Random.Range (0f, 1.0f) <= 0.5f) {
+			return true;
+		}
+		return false;
+	}
+	
+	public bool AttackCrit() {
+		if (UnityEngine.Random.Range (0f, 1.0f) <= 0.5f) {
+			return true;
+		}
+		return false;
+	}
+
 }
